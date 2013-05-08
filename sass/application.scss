@@ -1,0 +1,60 @@
+@import "compass";
+@import "sassy-buttons";
+
+@mixin line-bottom($op1: .2, $op2: .3){
+  border-bottom: 1px solid rgba(0, 0, 0, $op1);
+  @include box-shadow(rgba(255, 255, 255, $op2) 0 1px 0);
+}
+@mixin ts-000($op: .4){
+  text-shadow: 1px -1px rgba(0, 0, 0, $op);
+}
+@mixin box-deboss($border: .1, $shadow: .1, $highlight: 1) {
+  border: 1px solid rgba(0, 0, 0, $border);
+  @include box-shadow(rgba(0, 0, 0, $shadow) -1px 1px 2px inset, rgba(255, 255, 255, $highlight) -1px 1px 0); 
+}
+
+body {
+  color: #eee;
+  font-family: Helvetica,Arial,'ヒラギノ角ゴ Pro W3','メイリオ','ＭＳ Ｐゴシック',sans-serif;
+  background: url(/images/dark_wood.png) repeat;
+}
+.container {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 870px;
+}
+h1 {
+  font-size: 50px;
+  @include line-bottom(1, .1);
+}
+.concept {
+  font-size: 20px;
+  margin-top: 20px;
+  p {
+    margin-top: 5px;
+  }
+}
+.main {
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+}
+.passphrase {
+  @include border-radius(6px);
+  width: 400px;
+  height: 30px;
+  padding: 5px;
+  background-color: #fff;
+  input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+  }
+}
+.button {
+  margin-top: 10px;
+  @include sassy-button;
+}

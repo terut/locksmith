@@ -1,0 +1,5 @@
+.main
+  %form{ action:'/download', method: 'post' }
+    .passphrase
+      %input{ type: 'password', name: 'passphrase', placeholder: 'パスフレーズを入れてください' }
+    %input.button{ type: 'submit', value: 'Download' }

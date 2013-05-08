@@ -1,0 +1,19 @@
+!!!html
+%html
+  %head
+    %title Locksmith
+    %meta{ name: "keywords", content: "Locksmith" }
+    %link{ href: "/stylesheets/screen.css", media: "screen, projection", rel: "stylesheet", type: "text/css" }
+    %link{ href: "/stylesheets/print.css", media: "print", rel: "stylesheet", type: "text/css" }
+    <!--[if IE]>
+    %link{ href: "/stylesheets/ie.css", media: "screen, projection", rel: "stylesheet", type: "text/css" }
+    <![endif]-->
+    %link{ rel: "stylesheet", href: "/stylesheets/application.css" }
+  %body
+    .container
+      %h1 Locksmith
+      .concept
+        %p Locksmith は SSH の鍵屋さんです.
+        %p 誰でも簡単に SSH の鍵を作ることができます.
+        %p SSH のパスフレーズは必須ではないので、必要がなければそのままダウンロードできます.
+      = yield
